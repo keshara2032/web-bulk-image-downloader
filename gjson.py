@@ -16,13 +16,13 @@ cx = config['API_KEY']['cx_key']
 service = build("customsearch", "v1", developerKey=api_key)
 
 # Example usage:
-search_query = 'blood pressure taken by a nurse'
-folder_path = './dataset/nibp'
+search_query = 'iv access'
+folder_path = './dataset/iv_access'
 
 if(not os.path.exists(folder_path)):
-    os.mkdir(folder_path)
+    os.makedirs(folder_path)
 
-page_size = 10
+page_size = 5
 start_index = 1
 
 while True:

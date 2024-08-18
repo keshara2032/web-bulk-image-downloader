@@ -2,7 +2,7 @@ import requests
 
 def download_image(url, save_path):
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)
         # Check if the request was successful (status code 200)
         if response.status_code == 200:
             # Save the image
